@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emporium</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <section class="header">
+        <a href="index.html"><img src="img/logo1.png" alt="logo" /></a>
+        <nav>
+            <ul id="navbar" class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li id="lg-bag"><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </nav>
+        <div class="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#Let's_talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you! </p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency locations or contact us today</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p>81 AUREATE, KC Marg, Bandra West, Mumbai</p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>ffarooqui286@example.com</p>
+                </li>
+                <li>
+                    <i class="far fa-phone-alt"></i>
+                    <p>+91 8928036504</p>
+                </li>
+                <li>
+                    <i class="far fa-clock"></i>
+                    <p>Monday to Saturday: 9.00am to 4.00pm</p>
+                </li>
+            </div>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2573639923257!2d72.83366227495429!3d19.0524188527129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93c799bc1cb%3A0xd3f7ff1e814ccf99!2s81%20Aureate!5e0!3m2!1sen!2sin!4v1693658899375!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form class="form" method="post" action="contact.php">
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you!</h2>
+            <input type="text"  name="yourName" placeholder="Your Name">
+            <input type="text"  name="yourEmail" placeholder="Enter your Email">
+            <input type="text"  name="proType" placeholder="Subject">
+            <textarea  name="parag" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button type="submit" class="normal">Submit</button>
+        </form>
+        
+
+        <div class="people">
+            <div>
+                <img src="img/people/1.png" alt="">
+                <p><span>John Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br>Email:
+                    contact@example.com</p>
+            </div>
+            <div>
+                <img src="img/people/2.png" alt="">
+                <p><span>Shon Mendis</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br>Email:
+                    contact@example.com</p>
+            </div>
+            <div>
+                <img src="img/people/3.png" alt="">
+                <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br>Email:
+                    contact@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter section-p1 section-m1">
+        <div class="newsletter__text">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="newsletter__form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+          <img class="logo" src="img/logo1.png" alt="logo">
+          <h4>Contact</h4>
+          <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+          <p><strong>Phone: </strong>+01 2222 365/(+91) 01 2345 6789</p>
+          <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col">
+          <h4>About</h4>
+          <a href="#">About</a>
+          <a href="#">Delivery Information</a>
+          <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/privacy">Privacy Policy</a>
+          <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/terms">Terms & Conditions</a>
+          <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/shipping">Shipping & Delivery Policy</a>
+          <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/refund">Cancellation & Return Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+        
+        <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Orders</a>
+          <a href="#">Help</a>
+        </div>
+  
+        <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+            <img src="img/pay/app.jpg" alt="App Store">
+            <img src="img/pay/play.jpg" alt="Google Play">
+          </div>
+          <p>Secure Payment Gateways</p>
+          <img src="img/pay/pay.png" alt="Payment">
+        </div>
+  
+        <div class="copyright">
+          <p>&#169; 2023, Emporium - Where luxury meets legacy.</p>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

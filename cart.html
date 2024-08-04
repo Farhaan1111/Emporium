@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emporium</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <section class="header">
+        <a href="index.html"><img src="img/logo1.png" alt="logo" /></a>
+        <nav>
+            <ul id="navbar" class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li id="lg-bag"><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </nav>
+        <div class="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#Cart</h2>
+        <p>Add your coupon code & SAVE upto 70%! </p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table id="cart-table" width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            <tbody>
+                <tr>
+                    <td><a href="#" class="remove-row">Remove</a></td>
+                    <td><img src="img/blazer/blazer11.jpg" alt=""></td>
+                    <td>Fashon White Blazer</td>
+                    <td>₹12000.00</td>
+                    <td><input type="number" value="1" onchange="updateSubtotal(this)"></td>
+                    <td>₹12000.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="remove-row">Remove</a></td>
+                    <td><img src="img/kurta/kurta3.jpg" alt=""></td>
+                    <td>Wave pattern kurta</td>
+                    <td>₹3000.00</td>
+                    <td><input type="number" value="1" onchange="updateSubtotal(this)"></td>
+                    <td>₹3000.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="remove-row">Remove</a></td>
+                    <td><img src="img/sherwani/sher3.jpg" alt=""></td>
+                    <td>Cherry Blossom Floral Patterned Sherwani</td>
+                    <td>₹13500.00</td>
+                    <td><input type="number" value="1" onchange="updateSubtotal(this)"></td>
+                    <td>₹13500.00</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" id="coupon-code" placeholder="Enter Your Coupon">
+                <button class="normal" onclick="applyCoupon()">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-total">₹ 0.00</td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td id="discount">₹ 0.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong id="cart-grand-total">₹ 0.00</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+    =
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo1.png" alt="logo">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong>+01 2222 365/(+91) 01 2345 6789</p>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About</a>
+            <a href="#">Delivery Information</a>
+            <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/privacy">Privacy Policy</a>
+            <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/terms">Terms & Conditions</a>
+            <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/shipping">Shipping & Delivery Policy</a>
+            <a href="https://merchant.razorpay.com/policy/Mab8ARPlI6pScU/refund">Cancellation & Return Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Orders</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="App Store">
+                <img src="img/pay/play.jpg" alt="Google Play">
+            </div>
+            <p>Secure Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="Payment">
+        </div>
+
+        <div class="copyright">
+            <p>&#169; 2023, Emporium - Where luxury meets legacy.</p>
+        </div>
+    </footer>
+    <script>
+        function populateCartTable() {
+  // Get the cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem('cart'));
+
+  // Get a reference to the cart table
+  const tableBody = document.querySelector('#cart-table tbody');
+
+  // Loop through the cart items and add them to the table
+  cart.forEach(product => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td><a href="#" class="remove-row">Remove</a></td>
+      <td><img src="img/placeholder.jpg" alt=""></td>
+      <td>${product.name}</td>
+      <td>₹${product.price.toFixed(2)}</td>
+      <td><input type="number" value="1" onchange="updateSubtotal(this)"></td>
+      <td>₹${product.price.toFixed(2)}</td>
+    `;
+    tableBody.appendChild(row);
+  });
+}
+
+// Call populateCartTable() when the page loads
+window.onload = () => {
+  populateCartTable();
+  updateCartTotal();
+};
+
+    </script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

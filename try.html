@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Function to add a product to the cart table
+        function addToCart(productName, price) {
+            const cartTable = document.getElementById("cart-table").querySelector("tbody");
+            
+            // Create a new row for the product
+            const newRow = document.createElement("tr");
+            
+            // Define the HTML for the new row
+            newRow.innerHTML = `
+                <td><a href="#" class="remove-row">Remove</a></td>
+                <td><img src="img/${productName}/${productName}1.jpg" alt=""></td>
+                <td>${productName}</td>
+                <td>₹${price.toFixed(2)}</td>
+                <td><input type="number" value="1" onchange="updateSubtotal(this)"></td>
+                <td>₹${price.toFixed(2)}</td>
+            `;
+            
+            // Append the new row to the cart table
+            cartTable.appendChild(newRow);
+            
+            // Update the cart total
+            updateCartTotal();
+        }
+
+        // Rest of your JavaScript code (updateSubtotal, updateCartTotal, and removeProduct functions)
+        // ...
+
+    </script>
+</head>
+<body>
+    <section id="cart" class="section-p1">
+        <table id="cart-table" width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing rows go here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-total">₹ 0.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong id="cart-grand-total">₹ 0.00</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <!-- Example "Add to Cart" buttons for products -->
+    <button onclick="addToCart('blazer', 12000)">Add Fashon White Blazer to Cart</button>
+    <button onclick="addToCart('kurta', 3000)">Add Wave pattern kurta to Cart</button>
+    <button onclick="addToCart('sherwani', 13500)">Add Cherry Blossom Floral Patterned Sherwani to Cart</button>
+</body>
+</html>
